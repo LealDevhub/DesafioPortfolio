@@ -1,0 +1,256 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+  text-decoration: none;
+}
+
+:root {
+  --body-bg-color: #22212c;
+  --text-color: #837e9f;
+  --bg-cards: #302f3d;
+  --bg-techs: #cb92b1;
+
+  --padding: 30px;
+}
+
+body {
+  background-color: var(--body-bg-color);
+  color: var(--text-color);
+
+  display: flex;
+  gap: 60px;
+
+  margin: 40px;
+
+  font-family: 'Merriweather Sans', sans-serif;
+}
+
+aside {
+  flex: 1;
+}
+
+aside,
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+main {
+  flex: 2;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+h3 {
+  font-size: 16px;
+}
+
+/*Todas as caixas terão as seguintes propriedades*/
+.box {
+  border: 1px solid var(--body-bg-color);
+  background-color: var(--bg-cards);
+  border-radius: 20px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.2s;
+}
+
+.box:hover {
+  box-shadow: 9px 9px 9px 1px rgba(0, 0, 0, 0.2);
+}
+
+/*PORPRIEDADE DA PARTE ASIDE*/
+
+/*propriedades da caixa do usuário*/
+.box.user {
+  text-align: center;
+  padding: 32px 76px 49px 76px;
+}
+
+.box.user img {
+  margin-bottom: 30px;
+}
+
+.box.user h2 {
+  margin-bottom: 10px;
+  font-size: 23px;
+}
+
+.box.user div {
+  font-size: 13px;
+  font-weight: 300;
+}
+
+.avatar {
+  width: 128px;
+  border-radius: 50%;
+  border: 2px solid #00ff00;
+}
+
+/*propriedades da caixa de informações*/
+.box.info {
+  padding: 30px 98px 30px 40px;
+}
+
+.box.info div {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  margin-bottom: 20px;
+
+  font-size: 13px;
+  font-weight: 300;
+}
+
+/*propriedades da caixa de tecnologias*/
+
+.box.tech-list {
+  padding: 30px;
+}
+
+.techs-wrapper ul {
+  margin-top: 26px;
+
+  list-style: none;
+
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+
+  flex-basis: 288px;
+}
+
+.techs-wrapper ul li {
+  background-color: var(--bg-techs);
+  color: var(--body-bg-color);
+
+  border-radius: 30px;
+  padding: 7px 0;
+  width: 86px;
+
+  font-size: 10px;
+  font-weight: 700;
+  text-align: center;
+}
+
+/*propriedades da caixa experiências e educação*/
+.box.port,
+.box.studys {
+  padding: 30px 133px 30px 20px;
+}
+
+.box.port ul,
+.box.studys ul {
+  margin-left: 40px;
+  margin-top: 20px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  font-size: 12px;
+  font-weight: 300;
+}
+
+/*PROPRIEDADES DA PARTE MAIN*/
+
+/*-------Meus Projetos-----------*/
+.projects {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 30px;
+}
+
+.projects a {
+  color: var(--text-color);
+}
+
+.boxes {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.boxes .box {
+  padding: 30px;
+}
+
+.boxes .box p,
+.seila span {
+  font-size: 13px;
+  font-weight: 300;
+}
+
+.project-name,
+.seila {
+  gap: 16px;
+}
+
+.project-name,
+.seila,
+.icon,
+.javascript {
+  display: flex;
+  align-items: center;
+}
+
+.boxes .box p {
+  margin: 20px 0;
+}
+
+.seila {
+  justify-content: space-between;
+}
+
+.icon span,
+.icon img {
+  margin-right: 5px;
+}
+
+.javascript {
+  gap: 5px;
+}
+
+/*--------POSTS-------------*/
+.box.posts,
+.box.post {
+  padding: 30px;
+}
+
+.avatar-2 {
+  width: 128px;
+  border-radius: 50%;
+}
+
+.box.post {
+  display: flex;
+  align-items: center;
+}
+
+.box.post .informations {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  margin-left: 20px;
+}
+
+.box.post .informations .title p,
+.paragraph p {
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.box.post .informations .title p {
+  margin-top: 5px;
+}
+
+.paragraph p {
+  margin-bottom: 10px;
+}
