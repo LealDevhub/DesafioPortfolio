@@ -215,7 +215,6 @@ nav {
 
 .boxes.show {
   position: relative;
-  z-index: -1;
   visibility: visible;
   opacity: 1;
   transform: translateY(0);
@@ -321,6 +320,7 @@ nav {
   aside.invisible {
     position: absolute;
     visibility: hidden;
+    z-index: 2;
   }
 
   .icon {
