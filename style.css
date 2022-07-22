@@ -14,14 +14,18 @@
   --padding: 30px;
 }
 
+html {
+  font-size: 62.5%;
+}
+
 body {
   background-color: var(--body-bg-color);
   color: var(--text-color);
 
   display: flex;
-  gap: 60px;
+  gap: 6rem;
 
-  margin: 40px;
+  margin: 4rem;
 
   font-family: 'Merriweather Sans', sans-serif;
 }
@@ -30,11 +34,15 @@ aside {
   flex: 1;
 }
 
-aside,
+#aside-content,
 main {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 3rem;
+}
+
+#aside-content {
+  margin-top: 3rem;
 }
 
 main {
@@ -42,24 +50,37 @@ main {
 }
 
 h2 {
-  font-size: 20px;
+  font-size: 2rem;
 }
 
 h3 {
-  font-size: 16px;
+  font-size: 1.6rem;
+}
+
+a {
+  color: var(--text-color);
+}
+
+nav {
+  visibility: hidden;
+  position: absolute;
 }
 
 /*Todas as caixas terão as seguintes propriedades*/
 .box {
+  padding: 3rem;
+
   border: 1px solid var(--body-bg-color);
+  border-radius: 2rem;
+
   background-color: var(--bg-cards);
-  border-radius: 20px;
-  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0.2rem 0.2rem 0.2rem 0.1rem rgba(0, 0, 0, 0.2);
+
   transition: box-shadow 0.2s;
 }
 
 .box:hover {
-  box-shadow: 9px 9px 9px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0.9rem 0.9rem 0.9rem 0.1rem rgba(0, 0, 0, 0.2);
 }
 
 /*PORPRIEDADE DA PARTE ASIDE*/
@@ -67,165 +88,181 @@ h3 {
 /*propriedades da caixa do usuário*/
 .box.user {
   text-align: center;
-  padding: 32px 76px 49px 76px;
 }
 
 .box.user img {
-  margin-bottom: 30px;
+  margin-bottom: 3rem;
 }
 
 .box.user h2 {
-  margin-bottom: 10px;
-  font-size: 23px;
+  margin-bottom: 1rem;
+  font-size: 2.3rem;
 }
 
 .box.user div {
-  font-size: 13px;
+  font-size: 1.3rem;
   font-weight: 300;
 }
 
 .avatar {
-  width: 128px;
+  width: 12.8rem;
   border-radius: 50%;
-  border: 2px solid #00ff00;
+  border: 0.2rem solid #00ff00;
 }
 
 /*propriedades da caixa de informações*/
-.box.info {
-  padding: 30px 98px 30px 40px;
-}
 
-.box.info div {
+.box.info div a {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 2rem;
 
-  margin-bottom: 20px;
+  width: fit-content;
 
-  font-size: 13px;
+  margin-bottom: 2rem;
+
+  color: var(--text-color);
+
+  font-size: 1.3rem;
   font-weight: 300;
+
+  transition: transform 0.3s;
+}
+
+.box.info div a:hover {
+  transform: translateY(-7px);
 }
 
 /*propriedades da caixa de tecnologias*/
 
-.box.tech-list {
-  padding: 30px;
-}
-
 .techs-wrapper ul {
-  margin-top: 26px;
+  margin-top: 2.6rem;
 
   list-style: none;
 
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 15px;
+  gap: 1.5rem;
 
-  flex-basis: 288px;
+  flex-basis: 28.8rem;
 }
 
 .techs-wrapper ul li {
   background-color: var(--bg-techs);
   color: var(--body-bg-color);
 
-  border-radius: 30px;
-  padding: 7px 0;
-  width: 86px;
+  border-radius: 3rem;
+  padding: 0.7rem 0;
+  width: 8.6rem;
 
-  font-size: 10px;
+  font-size: 1rem;
   font-weight: 700;
   text-align: center;
 }
 
 /*propriedades da caixa experiências e educação*/
-.box.port,
-.box.studys {
-  padding: 30px 133px 30px 20px;
-}
 
 .box.port ul,
 .box.studys ul {
-  margin-left: 40px;
-  margin-top: 20px;
+  margin-left: 4rem;
+  margin-top: 2rem;
 
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 2rem;
 
-  font-size: 12px;
+  font-size: 1.2rem;
   font-weight: 300;
 }
 
 /*PROPRIEDADES DA PARTE MAIN*/
 
 /*-------Meus Projetos-----------*/
-.projects {
+.box.project {
+  position: relative;
+  z-index: 2;
+}
+
+.my-projects {
   display: flex;
   align-items: center;
   justify-content: space-between;
-
-  padding: 30px;
 }
 
-.projects a {
+.my-projects button {
+  background: none;
+  border: none;
   color: var(--text-color);
+  cursor: pointer;
 }
 
 .boxes {
   display: flex;
   align-items: center;
-  gap: 30px;
+  flex-wrap: wrap;
+  gap: 3rem;
+
+  position: absolute;
+
+  visibility: hidden;
+  opacity: 0;
+
+  transition: transform 0.5s;
+  transform: translateY(-10%);
+}
+
+.boxes.show {
+  position: relative;
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .boxes .box {
-  padding: 30px;
+  width: 29rem;
 }
 
 .boxes .box p,
-.seila span {
-  font-size: 13px;
+.icons span {
+  font-size: 1.3rem;
   font-weight: 300;
 }
 
 .project-name,
-.seila {
-  gap: 16px;
+.icons {
+  gap: 1.6rem;
 }
 
 .project-name,
-.seila,
-.icon,
+.icons,
+.icon-project,
 .javascript {
   display: flex;
   align-items: center;
 }
 
 .boxes .box p {
-  margin: 20px 0;
+  margin: 2rem 0;
 }
 
-.seila {
+.icons {
   justify-content: space-between;
 }
 
-.icon span,
-.icon img {
-  margin-right: 5px;
+.icon-project span,
+.icon-project img {
+  margin-right: 0.5rem;
 }
 
 .javascript {
-  gap: 5px;
+  gap: 0.5rem;
 }
 
 /*--------POSTS-------------*/
-.box.posts,
-.box.post {
-  padding: 30px;
-}
 
 .avatar-2 {
-  width: 128px;
+  width: 12.8rem;
   border-radius: 50%;
 }
 
@@ -237,20 +274,156 @@ h3 {
 .box.post .informations {
   display: flex;
   flex-direction: column;
-  gap: 28px;
-  margin-left: 20px;
+  gap: 2.8rem;
+  margin-left: 2rem;
 }
 
 .box.post .informations .title p,
 .paragraph p {
-  font-size: 14px;
+  font-size: 1.4rem;
   font-weight: 300;
 }
 
 .box.post .informations .title p {
-  margin-top: 5px;
+  margin-top: 0.5rem;
 }
 
 .paragraph p {
-  margin-bottom: 10px;
+  margin-bottom: 1rem;
+}
+
+/*========== MEDIA QUERIES =========*/
+/* extra large devices: 1200 > */
+
+/* large devices: 1023 >*/
+@media (max-width: 1023px) {
+  body {
+    margin: 4rem 4rem 4rem 13rem;
+    gap: 0;
+  }
+
+  main {
+    position: absolute;
+    visibility: hidden;
+    flex: 1;
+  }
+
+  aside {
+    flex: 1;
+  }
+
+  main.visible {
+    position: static;
+    visibility: visible;
+  }
+
+  aside.invisible {
+    position: absolute;
+    visibility: hidden;
+  }
+
+  .icon {
+    display: inline-block;
+    width: 2.5rem;
+    height: 2.5rem;
+    stroke-width: 0;
+    stroke: currentColor;
+    fill: currentColor;
+  }
+
+  .open-menu {
+    position: relative;
+    top: 1.5rem;
+    cursor: pointer;
+    width: fit-content;
+  }
+
+  nav.open {
+    width: 30rem;
+    box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.2);
+    transition: 0.5s;
+  }
+
+  nav {
+    width: 10rem;
+    height: 100vh;
+
+    flex: 1;
+    visibility: visible;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+
+    background-color: var(--bg-cards);
+    border-radius: 0 1rem 1rem 0;
+  }
+
+  nav .menu {
+    margin-top: 5rem;
+  }
+
+  nav .menu ul li {
+    display: flex;
+    align-items: center;
+    transition: transform 0.2s;
+    cursor: pointer;
+    width: fit-content;
+  }
+
+  nav .menu ul li:hover {
+    transform: translateY(-7px);
+  }
+
+  nav .menu ul li span {
+    font-size: 1.6rem;
+
+    visibility: hidden;
+    opacity: 0;
+
+    transition: opacity 0.2s;
+    margin-left: 1rem;
+  }
+
+  nav.open .menu ul li span {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  nav .menu ul li ul {
+    visibility: hidden;
+    position: absolute;
+  }
+
+  nav .menu ul li.options ul {
+    visibility: visible;
+  }
+
+  nav .menu ul li,
+  nav.open .menu ul li,
+  .open-menu {
+    text-align: left;
+
+    list-style: none;
+
+    position: relative;
+    top: 4rem;
+
+    margin-bottom: 2rem;
+    margin-left: 4rem;
+  }
+
+  .box.post {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+/* large devices: 992 >*/
+
+/*medium devices: 767*/
+@media (max-width: 767px) {
+  nav {
+    height: 120vh;
+  }
 }

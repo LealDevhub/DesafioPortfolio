@@ -17,13 +17,35 @@
       rel="stylesheet"
     />
 
-    <link
-      rel="shortcut icon"
-      href="./assets/assets/favicon.ico"
-      type="image/x-icon"
-    />
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon" />
   </head>
   <body>
+    <nav>
+      <div class="open-menu">
+        <svg class="icon icon-list2">
+          <use xlink:href="#icon-list2">
+            <symbol id="icon-list2" viewBox="0 0 32 32">
+              <path
+                d="M12 2h20v4h-20v-4zM12 14h20v4h-20v-4zM12 26h20v4h-20v-4zM0 4c0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.209-1.791 4-4 4s-4-1.791-4-4zM0 16c0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.209-1.791 4-4 4s-4-1.791-4-4zM0 28c0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.209-1.791 4-4 4s-4-1.791-4-4z"
+              ></path>
+            </symbol>
+          </use>
+        </svg>
+      </div>
+
+      <div class="menu">
+        <ul>
+          <li class="about-me">
+            <img src="./assets/user.svg" alt="about icon" />
+            <span>Sobre</span>
+          </li>
+          <li class="feed">
+            <img src="./assets/profile.svg" alt="feed icon" />
+            <span>Feed</span>
+          </li>
+        </ul>
+      </div>
+    </nav>
     <!--INFORMAÇÕES DO USUÁRIO AO LADO ESQUERDO DA TELA-->
     <aside>
       <!--APRESENTAÇÃO DO USUÁRIO-->
@@ -37,183 +59,275 @@
         <div>Front-End Developer</div>
       </div>
       <!--CONTEUDO DA CAIXA DE INFORMAÇÕES DO USUÁRIO-->
-      <div class="box info">
-        <div class="local">
-          <img src="./assets/assets/map-pin.svg" alt="Localização" />
-          Brasil
+      <section id="aside-content">
+        <div class="box info">
+          <div class="local">
+            <a
+              href="https://www.google.com.br/maps/place/S%C3%A3o+Paulo/@-22.548167,-50.8802699,7z/data=!3m1!4b1!4m5!3m4!1s0x94ce597d462f58ad:0x1e5241e2e17b7c17!8m2!3d-21.2922457!4d-50.3428431"
+              target="_blank"
+            >
+              <img src="./assets/map-pin.svg" alt="Localização" />
+              Brasil - São Paulo
+            </a>
+          </div>
+
+          <div class="study">
+            <a href="https://rocketseat.com.br" target="_blank">
+              <img src="./assets/briefcase.svg" alt="Formação" />
+              Rocketseat
+            </a>
+          </div>
+
+          <div class="github">
+            <a href="https://github.com/FPLealhub" target="_blank">
+              <img src="./assets/github.svg" alt="profile name do github" />
+              FPLealhub
+            </a>
+          </div>
+
+          <div class="linkedin">
+            <a
+              href="https://www.linkedin.com/in/fabricio-pereira-leal-0223911b8/"
+              target="_blank"
+            >
+              <img src="./assets/linkedin.svg" alt="usuário no Linkedin" />
+              fabricio-pereira-leal
+            </a>
+          </div>
+
+          <div class="twitter">
+            <a href="https://twitter.com" target="_blank">
+              <img src="./assets/twitter.svg" alt="usuário no twitter" />
+              @vaifalafafa
+            </a>
+          </div>
+
+          <div class="email">
+            <a href="mailto:fabriciopereiraleal2021@gmail.com" target="_blank">
+              <img src="./assets/mail.svg" alt="email do usuário" />
+              fabriciopereiraleal2021@gmail.com
+            </a>
+          </div>
+        </div>
+        <!--CONTEUDO DA CAIXA DE TECNOLOGIAS-->
+        <div class="box tech-list">
+          <div class="techs-wrapper">
+            <h2>Tecnologias</h2>
+            <ul>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JAVASCRIPT</li>
+              <li>GITHUB</li>
+              <li>NODEJS</li>
+            </ul>
+          </div>
+        </div>
+        <!--CONTEUDO DA CAIXA DE EXPERIÊNCIAS-->
+        <div class="box port">
+          <div class="exp">
+            <h2>Expêriencias</h2>
+            <ul>
+              <li>
+                <strong>Rocketseat</strong>
+                <div>2022 - março</div>
+                <div>nlw - missão: Origin</div>
+              </li>
+              <li>
+                <strong>Rocketseat</strong>
+                <div>2022 - junho</div>
+                <div>Maratona Explorer</div>
+              </li>
+              <li>
+                <strong>Rocketseat</strong>
+                <div>2022 - julho</div>
+                <div>Maratona Explorer 2.0</div>
+              </li>
+            </ul>
+          </div>
         </div>
 
-        <div class="study">
-          <img src="./assets/assets/folder.svg" alt="Formação" />
-          Rocketseat
+        <!--CONTEUDO DA CAIXA DE EDUCAÇÕES-->
+        <div class="box studys">
+          <div class="education">
+            <h2>Educação</h2>
+            <ul>
+              <li>
+                <a href="https://rocketseat.com.br/discover">
+                  <strong>Rocketseat</strong>
+                  <div>2022 - 2022</div>
+                  <div>Discover</div>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
-
-        <div class="github">
-          <img src="./assets/assets/github.svg" alt="profile name do github" />
-          FPLealhub
-        </div>
-
-        <div class="linkedin">
-          <img src="./assets/assets/linkedin.svg" alt="usuário no Linkedin" />
-          fabricio-pereira-leal
-        </div>
-
-        <div class="twitter">
-          <img src="./assets/assets/twitter.svg" alt="usuário no twitter" />
-          @vaifalafafa
-        </div>
-
-        <div class="email">
-          <img src="./assets/assets/mail.svg" alt="email do usuário" />
-          fabriciopereiraleal2021@gmail.com
-        </div>
-      </div>
-      <!--CONTEUDO DA CAIXA DE TECNOLOGIAS-->
-      <div class="box tech-list">
-        <div class="techs-wrapper">
-          <h2>Tecnologias</h2>
-          <ul>
-            <li>JAVASCRIPT</li>
-            <li>REACTJS</li>
-            <li>NODEJS</li>
-            <li>GIT</li>
-            <li>GITHUB</li>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>ELIXIR</li>
-            <li>REACT NATIVE</li>
-          </ul>
-        </div>
-      </div>
-      <!--CONTEUDO DA CAIXA DE EXPERIÊNCIAS-->
-      <div class="box port">
-        <div class="exp">
-          <h2>Expêriencias</h2>
-          <ul>
-            <li>
-              <strong>Rocketseat</strong>
-              <div>2019 - Atualmente</div>
-              <div>Comunity Experience</div>
-            </li>
-            <li>
-              <strong>Rocketseat</strong>
-              <div>2019 - Atualmente</div>
-              <div>Comunity Experience</div>
-            </li>
-            <li>
-              <strong>Rocketseat</strong>
-              <div>2019 - Atualmente</div>
-              <div>Comunity Experience</div>
-            </li>
-            <li>
-              <strong>Rocketseat</strong>
-              <div>2019 - Atualmente</div>
-              <div>Comunity Experience</div>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <!--CONTEUDO DA CAIXA DE EDUCAÇÕES-->
-      <div class="box studys">
-        <div class="education">
-          <h2>Educação</h2>
-          <ul>
-            <li>
-              <strong>Rocketseat</strong>
-              <div>2019 - 2019</div>
-              <div>GoStack</div>
-            </li>
-
-            <li>
-              <strong>Rocketseat</strong>
-              <div>2019 - 2020</div>
-              <div>Ignite</div>
-            </li>
-
-            <li>
-              <strong>Rocketseat</strong>
-              <div>2019 - 2021</div>
-              <div>Ignite Pro</div>
-            </li>
-
-            <li>
-              <strong>Rocketseat</strong>
-              <div>2019 - 2021</div>
-              <div>Ignite Pro</div>
-            </li>
-          </ul>
-        </div>
-      </div>
+      </section>
     </aside>
     <!--PUBLICAÇÕES E PROJETOS DO USUÁRIO-->
     <main>
-      <div class="box">
-        <div class="projects">
-          <h2>My projects</h2>
-          <a href="#">Veja todos</a>
+      <div class="box project">
+        <div class="my-projects">
+          <h2>Meus Projetos</h2>
+          <button>Veja todos</button>
         </div>
       </div>
 
       <div class="boxes">
-        <div class="box">
+        <a
+          href="https://github.com/FPLealhub/Swagtech"
+          target="_blank"
+          class="box"
+        >
           <div class="project-name">
-            <img src="./assets/assets/folder.svg" alt="pasta do projeto" />
-            <h4>my-onix</h4>
+            <img src="./assets/folder.svg" alt="pasta do projeto" />
+            <h3>BeautySalon.</h3>
           </div>
 
-          <p>
-            Consulte os códigos de erro que aparecem no painel do veículo Onix.
-          </p>
+          <p>Site estático para um salão de Beleza.</p>
 
-          <div class="seila">
-            <div class="icon">
-              <img src="./assets/assets/star.svg" alt="estrela icon" />
+          <div class="icons">
+            <div class="icon-project">
+              <img src="./assets/star.svg" alt="estrela icon" />
               <span>100</span>
 
-              <img src="./assets/assets/git-branch.svg" alt="branch-git" />
+              <img src="./assets/git-branch.svg" alt="branch-git" />
               <span>100</span>
             </div>
 
             <div class="javascript">
-              <img src="./assets/assets/briefcase.svg" alt="JAVASCRIPT" />
-              <span>JavaScript</span>
+              <img src="./assets/html-5.svg" alt="JAVASCRIPT" />
+              <span>HTML</span>
             </div>
           </div>
-        </div>
+        </a>
 
-        <div class="box">
+        <a
+          href="https://github.com/FPLealhub/MySocialTree"
+          target="_blank"
+          class="box"
+        >
           <div class="project-name">
-            <img src="./assets/assets/folder.svg" alt="pasta do projeto" />
-            <h4>my-onix</h4>
+            <img src="./assets/folder.svg" alt="pasta do projeto" />
+            <h3>MySocialTree</h3>
           </div>
 
-          <p>
-            Consulte os códigos de erro que aparecem no painel do veículo Onix.
-          </p>
+          <p>Página que contém links das redes sociais do usuário.</p>
 
-          <div class="seila">
-            <div class="icon">
-              <img src="./assets/assets/star.svg" alt="estrela icon" />
+          <div class="icons">
+            <div class="icon-project">
+              <img src="./assets/star.svg" alt="estrela icon" />
               <span>100</span>
 
-              <img src="./assets/assets/git-branch.svg" alt="branch-git" />
+              <img src="./assets/git-branch.svg" alt="branch-git" />
               <span>100</span>
             </div>
 
             <div class="javascript">
-              <img src="./assets/assets/briefcase.svg" alt="JAVASCRIPT" />
+              <img src="./assets/css3.svg" alt="CSS" />
+              <span>CSS</span>
+            </div>
+          </div>
+        </a>
+
+        <a
+          href="https://github.com/FPLealhub/Receita"
+          target="_blank"
+          class="box"
+        >
+          <div class="project-name">
+            <img src="./assets/folder.svg" alt="pasta do projeto" />
+            <h3>Receita</h3>
+          </div>
+
+          <p>página estilizada contendo uma receita de waffle clássico.</p>
+
+          <div class="icons">
+            <div class="icon-project">
+              <img src="./assets/star.svg" alt="estrela icon" />
+              <span>100</span>
+
+              <img src="./assets/git-branch.svg" alt="branch-git" />
+              <span>100</span>
+            </div>
+
+            <div class="javascript">
+              <img src="./assets/html-5.svg" alt="HTML" />
+              <span>HTML</span>
+            </div>
+          </div>
+        </a>
+
+        <a
+          href="https://github.com/FPLealhub/ShowYourFutute"
+          target="_blank"
+          class="box"
+        >
+          <div class="project-name">
+            <img src="./assets/folder.svg" alt="pasta do projeto" />
+            <h3>ShowYourFuture</h3>
+          </div>
+
+          <p>
+            Escreva sua pergunta sobre o futuro, e o site te dará a resposta.
+          </p>
+
+          <div class="icons">
+            <div class="icon-project">
+              <img src="./assets/star.svg" alt="estrela icon" />
+              <span>100</span>
+
+              <img src="./assets/git-branch.svg" alt="branch-git" />
+              <span>100</span>
+            </div>
+
+            <div class="javascript">
+              <img src="./assets/javascript.svg" alt="JAVASCRIPT" />
               <span>JavaScript</span>
             </div>
           </div>
-        </div>
+        </a>
+
+        <a
+          href="https://github.com/FPLealhub/ThemeSwitch"
+          target="_blank"
+          class="box"
+        >
+          <div class="project-name">
+            <img src="./assets/folder.svg" alt="pasta do projeto" />
+            <h3>ThemeSwitch</h3>
+          </div>
+
+          <p>
+            página que contém um toggle centralizado, que muda o tema para
+            escuro ou claro.
+          </p>
+
+          <div class="icons">
+            <div class="icon-project">
+              <img src="./assets/star.svg" alt="estrela icon" />
+              <span>100</span>
+
+              <img src="./assets/git-branch.svg" alt="branch-git" />
+              <span>100</span>
+            </div>
+
+            <div class="javascript">
+              <img src="./assets/css3.svg" alt="JAVASCRIPT" />
+              <span>CSS</span>
+            </div>
+          </div>
+        </a>
       </div>
 
       <div class="box posts">
-        <h2>Recent Posts</h2>
+        <h2>Posts Recentes</h2>
       </div>
 
-      <div class="box post">
+      <a
+        href="https://www.instagram.com/reel/CgAEpZfgtQ5/"
+        target="_blank"
+        class="box post"
+      >
         <img
           class="avatar-2"
           src="https://avatars.githubusercontent.com/u/101584569?s=400&u=6b95887f2853d6f1404a34532d4baabae40930ae&v=4"
@@ -222,20 +336,18 @@
 
         <div class="informations">
           <div class="title">
-            <h3>
-              Erro adb devices no Genymotion e Android Studio (React Native)
-            </h3>
-            <p>2 anos atrás</p>
+            <h3>Reels: Executando desáfio Portfólio</h3>
+            <p>14 de Julho, 2022</p>
           </div>
 
           <div class="paragraph">
-            <p>
-              Erro adb devices no Genymotion e Android Studio (React Native)
-            </p>
-            <p>#react-native #genimotion #genimotion #genimotion</p>
+            <p>Desafio proposto, desafio feito! Hehe😝</p>
+            <p>#programador #frontend #dev #rocketseat #novoprojeto</p>
           </div>
         </div>
-      </div>
+      </a>
     </main>
+    <!--main.js-->
+    <script src="main.js"></script>
   </body>
 </html>
