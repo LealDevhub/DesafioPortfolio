@@ -6,29 +6,24 @@ button.addEventListener('click', function () {
 })
 
 /*open -menu*/
-const openMenu = document.querySelector('.open-menu')
-const nav = document.querySelector('nav')
 const aboutList = document.querySelector('.about-me')
-const span = document.querySelector('.about-me span')
 const feedList = document.querySelector('.feed')
-
-openMenu.addEventListener('click', () => {
-  nav.classList.toggle('open')
-})
 
 /*aside <-> main*/
 const aside = document.querySelector('aside')
 const main = document.querySelector('main')
 
 aboutList.addEventListener('click', () => {
+  projects.classList.remove('show')
+  aboutList.classList.add('active')
+  feedList.classList.remove('active')
   main.classList.remove('visible')
   aside.classList.remove('invisible')
-  nav.classList.remove('open')
-  projects.classList.remove('show')
 })
 
 feedList.addEventListener('click', () => {
+  aboutList.classList.remove('active')
+  feedList.classList.add('active')
   main.classList.add('visible')
   aside.classList.add('invisible')
-  nav.classList.remove('open')
 })

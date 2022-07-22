@@ -214,6 +214,7 @@ nav {
 
 .boxes.show {
   position: relative;
+  z-index: -1;
   visibility: visible;
   opacity: 1;
   transform: translateY(0);
@@ -293,23 +294,22 @@ nav {
 }
 
 /*========== MEDIA QUERIES =========*/
-/* extra large devices: 1200 > */
-
 /* large devices: 1023 >*/
 @media (max-width: 1023px) {
+  html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+  }
   body {
-    margin: 4rem 4rem 4rem 13rem;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10rem;
     gap: 0;
   }
 
   main {
     position: absolute;
     visibility: hidden;
-    flex: 1;
-  }
-
-  aside {
-    flex: 1;
   }
 
   main.visible {
@@ -332,98 +332,51 @@ nav {
   }
 
   .open-menu {
-    position: relative;
     top: 1.5rem;
     cursor: pointer;
     width: fit-content;
   }
 
-  nav.open {
-    width: 30rem;
-    box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.2);
-    transition: 0.5s;
+  header nav {
+    visibility: visible;
+    position: static;
+    justify-content: space-between;
+    width: 90%;
   }
 
-  nav {
-    width: 10rem;
-    height: 100vh;
+  nav,
+  nav ul {
+    display: flex;
+    align-items: center;
+  }
 
-    flex: 1;
-    visibility: visible;
+  nav ul {
+    list-style: none;
+    gap: 1rem;
+  }
 
+  nav ul li {
+    cursor: pointer;
+    font-size: 1.4rem;
+    transition: 0.2s;
+  }
+
+  nav ul li:hover,
+  .about-me.active,
+  .feed.active {
+    filter: brightness(1.5);
+  }
+
+  header {
+    width: 100vw;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 3;
 
     background-color: var(--bg-cards);
-    border-radius: 0 1rem 1rem 0;
-  }
+    padding: 2rem;
 
-  nav .menu {
-    margin-top: 5rem;
-  }
-
-  nav .menu ul li {
-    display: flex;
-    align-items: center;
-    transition: transform 0.2s;
-    cursor: pointer;
-    width: fit-content;
-  }
-
-  nav .menu ul li:hover {
-    transform: translateY(-7px);
-  }
-
-  nav .menu ul li span {
-    font-size: 1.6rem;
-
-    visibility: hidden;
-    opacity: 0;
-
-    transition: opacity 0.2s;
-    margin-left: 1rem;
-  }
-
-  nav.open .menu ul li span {
-    visibility: visible;
-    opacity: 1;
-  }
-
-  nav .menu ul li ul {
-    visibility: hidden;
-    position: absolute;
-  }
-
-  nav .menu ul li.options ul {
-    visibility: visible;
-  }
-
-  nav .menu ul li,
-  nav.open .menu ul li,
-  .open-menu {
-    text-align: left;
-
-    list-style: none;
-
-    position: relative;
-    top: 4rem;
-
-    margin-bottom: 2rem;
-    margin-left: 4rem;
-  }
-
-  .box.post {
-    flex-direction: column;
-    gap: 2rem;
-  }
-}
-/* large devices: 992 >*/
-
-/*medium devices: 767*/
-@media (max-width: 767px) {
-  nav {
-    height: 120vh;
+    box-shadow: 3px 3px 3px 1px rgba(0, 0, 0, 0.2);
   }
 }
